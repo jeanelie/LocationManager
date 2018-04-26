@@ -467,7 +467,6 @@ static id _sharedInstance;
             BOOL hasAlwaysKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationAlwaysUsageDescription"] != nil;
             BOOL hasWhenInUseKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationWhenInUseUsageDescription"] != nil;
             if (hasAlwaysKey) {
-                [self.locationManager requestAlwaysAuthorization];
             } else if (hasWhenInUseKey) {
                 [self.locationManager requestWhenInUseAuthorization];
             } else {
@@ -478,7 +477,6 @@ static id _sharedInstance;
             BOOL hasAlwaysAndInUseKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationAlwaysAndWhenInUseUsageDescription"] != nil;
             BOOL hasWhenInUseKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationWhenInUseUsageDescription"] != nil;
             if (hasAlwaysAndInUseKey) {
-                [self.locationManager requestAlwaysAuthorization];
             } else if (hasWhenInUseKey) {
                 [self.locationManager requestWhenInUseAuthorization];
             } else {
